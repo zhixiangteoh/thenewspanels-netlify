@@ -1,0 +1,30 @@
+<span id="theme" style="user-select: none;">Dark Theme: <a id="themeText">off</a></span>
+<script type="text/javascript">
+    const _themeElement = document.getElementById("theme");
+    const _themeTextElement = document.getElementById("themeText");
+    _themeElement.addEventListener("click", function() {
+        if (document.body.className && document.body.className.includes("--theme-dark")) {
+            document.body.className = "";
+            document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
+            _themeTextElement.innerText = "off";
+
+            if (localStorage)
+                localStorage.removeItem("darkTheme");
+        } else {
+            document.body.className = "--theme-dark";
+			document.querySelector("meta[name='theme-color']").setAttribute("content", "#151515");
+			_themeTextElement.innerText = "on";
+
+			if (localStorage)
+			    localStorage.setItem("darkTheme", ".");
+        }
+    });
+
+	if (localStorage && localStorage.getItem("darkTheme")) {
+		document.body.className = "--theme-dark";
+		document.querySelector("meta[name='theme-color']").setAttribute("content", "#151515");
+		_themeTextElement.innerText = "on";
+	} else {
+		document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
+	}
+</script>

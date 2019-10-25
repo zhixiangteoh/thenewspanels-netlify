@@ -1,0 +1,71 @@
+<button id="comments-scroll" class="snackbar">
+	<span class="snackbar__title">Comments</span>
+	<i class="snackbar__icon material-icons">arrow_drop_down</i>
+</button>
+<script>
+	var scrollingElements = [
+		document.getElementsByClassName("iframe__container")[0], 
+		document.scrollingElement,
+		document.body,
+		document.documentElement,
+		document.getElementsByTagName("html")[0],
+		document.getElementsByTagName("main")[0]
+	];
+
+	function getWindowHeight() {
+		return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	}
+
+	function getScrollingElement() {
+		for (var i = 0; i < scrollingElements.length; i++) {
+			if (scrollingElements[i] && scrollingElements[i].scrollHeight > getWindowHeight())
+				return scrollingElements[i];
+		}
+
+		var scrollingElement = scrollingElements[0];
+		for (var i = 1; i < scrollingElements.length; i++) {
+			if (scrollingElement) {
+				if (scrollingElement.scrollTop > 0)
+					return scrollingElement;
+				
+				if (scrollingElements[i].scrollHeight > scrollingElement.scrollHeight)
+					scrollingElement = scrollingElements[i];
+			} else scrollingElement = scrollingElements[i];
+		}
+
+		return scrollingElement;
+	}
+
+	var scrollCommentsElement = document.getElementById("comments-scroll");
+	scrollCommentsElement.addEventListener("click", function() {
+		var scrollingElement = getScrollingElement();
+		if (scrollingElement)
+			scrollingElement.scrollTop = scrollingElement.scrollHeight;
+
+		document.location.hash = "disqus_thread";
+		document.getElementById("disqus_thread").scrollIntoView();
+	});
+
+	window.onscroll = function(e) {
+		var scrollingElement = e && e.target && e.target.scrollHeight > 0 ? e.target : getScrollingElement();
+		console.log("Scroll! ", scrollingElement);
+		if (scrollingElement) {
+			var scrollingHeight = scrollingElement.scrollHeight || scrollingElement.offsetHeight;
+			if (scrollingHeight - scrollingElement.scrollTop > 2 * getWindowHeight()) {
+				scrollCommentsElement.setAttribute("active", true);
+				return;
+			}
+		}
+
+		scrollCommentsElement.removeAttribute("active");
+	};
+
+	for (var i = 0; i < scrollingElements.length; i++) {
+		if (scrollingElements[i]) {
+			scrollingElements[i].onscroll = window.onscroll;
+			scrollingElements[i].addEventListener("scroll", window.onscroll);
+		}
+	}
+
+	window.onscroll();
+</script>

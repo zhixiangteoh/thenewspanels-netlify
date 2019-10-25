@@ -1,0 +1,16 @@
+.paper {
+	display: block;
+}
+
+.paper__item {
+	display: inline-block;
+}
+
+@media(min-width: 1000px) {
+	.paper {
+		display: grid;
+		grid-auto-flow: dense;
+		grid-auto-rows: 10vw;
+		grid-auto-columns: 1fr;
+	}
+}

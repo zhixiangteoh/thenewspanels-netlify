@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.name }}</title>
+		<description>{{ site.description }}</description>
+		<link>{{ site.url }}</link>
+		{% assign comics = site.comics | sort: 'title' %}{% for comic in comics reversed %}
+		<item>
+			<title>{{ comic.name | xml_escape }}</title>
+			{% if comic.description %}<description>{{ comic.description | xml_escape }}</description>
+			{% endif %}<pubDate>{{ comic.date | date_to_xmlschema }}</pubDate>
+			<link>{{ comic.url | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ comic.url | prepend: site.url }}</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="{{ comic.url | prepend: site.url }}">
+			      <img alt="test_pic" src="{{ site.url }}{{ comic.images[0] }}" />
+			    </a>
+			  ]]>
+			</content>
+		</item>{% endfor %}
+	</channel>
+</rss>

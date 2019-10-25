@@ -1,0 +1,48 @@
+.img__container--wide {
+	display: block;
+	position: relative;
+	width: calc(100% + 4vw);
+	margin: 0 -2vw;
+	overflow-x: auto;
+	height: 50vh;
+	max-height: 500px;
+	text-align: center;
+}
+
+.img--wide {
+	position: absolute;
+	width: auto;
+	min-width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.img--lazy {
+    opacity: 0;
+}
+
+.img--loaded {
+    opacity: 1;
+}
+
+@media(min-width: 1000px) {
+	.img__container--wide {
+		position: unset;
+		width: 100%;
+		margin: 0;
+		height: auto;
+		min-height: auto;
+		max-height: 100vh;
+		overflow-x: hidden;
+	}
+
+	.img--wide {
+		position: unset;
+		width: 100%;
+		min-width: auto;
+		height: auto;
+		min-height: 300px;
+		max-height: 40vh;
+	}
+}

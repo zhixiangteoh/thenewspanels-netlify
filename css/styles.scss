@@ -1,0 +1,198 @@
+---
+---
+
+* {
+	font-family: 'Lora', monospace;
+	animation-name: fadeIn;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+
+	--normal-color: #424242;
+	--normal-color-text: #616161;
+	--normal-color-focus: #000000;
+	--normal-color-focusable: #808080;
+	--normal-background: #FFFFFF;
+	--normal-background-dark: #F5F5F5;
+	--normal-background-darker: #E0E0E0;
+	--normal-background-alpha: rgba(255, 255, 255, 0);
+	--normal-overlay: rgba(255, 255, 255, 0.7);
+	--normal-overlay-inverse: rgba(0, 0, 0, 0.9);
+	--normal-outline: #BDBDBD;
+	--normal-outline-dark: #000000;
+	--normal-focus: rgba(0, 0, 0, 0.1);
+	--normal-focus-light: rgba(0, 0, 0, 0.03);
+	--accent-color: #095427;
+	--accent-color-text: #205e37;
+	--accent-background: #095427;
+	--accent-outline: #063519;
+	--accent-outline-fade: rgba(24, 53, 28, 0.3);
+	--accent-outline-fade2: rgba(24, 53, 28, 0.5);
+	--accent-inverse: #FFFFFF;
+	--image-brightness-focus: 0;
+}
+
+.--theme-dark,
+.--theme-dark * {
+	--normal-color: #F5F5F5;
+	--normal-color-text: #BDBDBD;
+	--normal-color-focus: #FFFFFF;
+	--normal-color-focusable: #A8A8A8;
+	--normal-background: #151515;
+	--normal-background-dark: #202020;
+	--normal-background-darker: #252525;
+	--normal-background-alpha: rgba(0, 0, 0, 0);
+	--normal-overlay: rgba(0, 0, 0, 0.7);
+	--normal-overlay-inverse: rgba(255, 255, 255, 0.8);
+	--normal-outline: #424242;
+	--normal-outline-dark: #FFFFFF;
+	--normal-focus: rgba(255, 255, 255, 0.1);
+	--normal-focus-light: rgba(255, 255, 255, 0.03);
+	--accent-color: #9FF7C9;
+	--accent-color-text: #6CD889;
+	--accent-background: #9FF7C9;
+	--accent-background-light: rgba(108, 216, 137, 0.3);
+	--accent-outline: #09A3FF;
+	--accent-outline-fade: rgba(108, 216, 137, 0.3);
+	--accent-outline-fade2: rgba(108, 216, 137, 0.5);
+	--accent-inverse: #000000;
+	--image-brightness-focus: 2;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.--noanim {
+	animation: none;
+}
+
+.--noanim>* {
+	animation: none;
+}
+
+body {
+	margin: 0;
+	background-color: #FFFFFF;
+	background-color: var(--normal-background);
+	color: #424242;
+	color: var(--normal-color);
+
+	word-wrap: break-word;
+	word-break: break-word;
+
+	transition: background-color .25s;
+	-moz-transition: background-color .25s;
+	-webkit-transition: background-color .25s;
+}
+
+body.--dialog {
+	overflow: hidden;
+}
+
+p {
+	color: #616161;
+	color: var(--normal-color-text);
+}
+
+a {
+	cursor: pointer;
+	outline: none;
+	color: #205E37;
+	color: var(--accent-color-text);
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+a:hover, a:focus {
+	color: #000000;
+	color: var(--normal-color-focus);
+}
+
+a:focus {
+	text-decoration-color: transparent;
+	font-weight: bold;
+}
+
+.material-icons.--focusable {
+	color: #808080;
+	color: var(--normal-color-focusable);
+
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+.material-icons.--focusable:hover {
+	color: #000000;
+	color: var(--normal-color-focus);
+}
+
+.material-icons.--clickable {
+	user-select: none;
+	cursor: pointer;
+}
+
+@import "elements/img.scss";
+@import "elements/iframe.scss";
+@import "elements/banner.scss";
+@import "elements/comic.scss";
+@import "elements/dialog.scss";
+@import "elements/paper.scss";
+@import "elements/paginator.scss";
+@import "elements/rtable.scss";
+@import "elements/snackbar.scss";
+@import "elements/title.scss";
+@import "elements/link.scss";
+@import "elements/footer.scss";
+
+main {
+	display: block;
+	margin: 0 2vw;
+	
+	transition: transform .25s;
+	-moz-transition: transform .25s;
+	-webkit-transition: transform .25s;
+}
+
+main.--frame {
+    margin: 0;
+}
+
+.--content {
+	margin-left: calc(5vw + 10px);
+	margin-right: calc(5vw + 10px);
+}
+
+body[webkit] main.--frame {
+	margin: 0;
+	padding: 0 2vw;
+	
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 2;
+}
+
+.--desktop {
+	display: none;
+}
+
+.--mobile {
+	display: block;
+}
+
+@media (min-width: 1000px) {
+	.--desktop {
+		display: block;
+	}
+
+	.--mobile {
+		display: none;
+	}
+}

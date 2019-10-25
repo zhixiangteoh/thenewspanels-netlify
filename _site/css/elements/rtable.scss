@@ -1,0 +1,15 @@
+.rtable {
+    display: block;
+}
+
+.rtable > * {
+    display: block;
+    margin: 1em 0;
+}
+
+@media(min-width: 1000px) {
+    .rtable > * {
+        display: inline-block;
+        width: 25%;
+    }
+}

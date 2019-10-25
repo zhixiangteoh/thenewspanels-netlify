@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="The news in comics.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, user-scalable=yes"/>
+<meta name="generator" content="The News Panels">
+<title>The News Panels - About</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="http://localhost:4000/manifest.json">
+
+<meta name="application-name" content="The News Panels">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="The news in comics.">
+<meta name="msapplication-config" content="http://localhost:4000/ieconfig.xml">
+
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="icon" sizes="16x16" href="http://localhost:4000/favicon.ico">
+<link rel="icon" sizes="24x24" href="http://localhost:4000/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="http://localhost:4000/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="http://localhost:4000/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="http://localhost:4000/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="The News Panels">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="http://localhost:4000/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:creator" content="@TheNewsPanels">
+<meta name="twitter:site" content="@TheNewsPanels">
+<meta name="twitter:title" content="The News Panels - About">
+<meta name="twitter:description" content="The news in comics.">
+<meta name="twitter:image" content="http://localhost:4000/images/logo.png">
+
+<meta name="og:url" content="http://localhost:4000/about/">
+<meta name="og:title" content="The News Panels - About">
+<meta name="og:description" content="The news in comics.">
+<meta name="og:image" content="http://localhost:4000/images/logo.png">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="The News Panels">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80302642-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80302642-3');
+</script>
+
+
+
+</head>
+<body>
+	<a href="http://localhost:4000" class="banner">
+	<div class="banner__container">
+		<img class="banner__icon" src="http://localhost:4000/images/favicon.svg">
+		&nbsp;
+		<span class="banner__name">The News Panels</span>
+	</div>
+</a>
+
+<main class="--content">
+	<h1 id="about">About</h1>
+
+<ul>
+  <li><a href="/about/contact/">Contact Us</a></li>
+  <li><a href="/about/privacy/">Privacy Policy</a></li>
+</ul>
+
+</main>
+
+<div class="footer">
+    
+    <hr>
+    <p class="rtable">
+        <span>
+            <b>About...</b><br>
+            <a href="http://localhost:4000/about/contact/">Contact Us</a><br>
+            <a href="http://localhost:4000/about/privacy/">Privacy Policy</a>
+        </span>
+        <span>
+            <b>Follow us on...</b><br>
+            <a href="https://twitter.com/@TheNewsPanels">Twitter (@TheNewsPanels)</a><br>
+            <a href="https://instagram.com/thenewspanels">Instagram (@thenewspanels)</a>
+        </span>
+        <span></span>
+        <span>
+            <span id="theme" style="user-select: none;">Dark Theme: <a id="themeText">off</a></span>
+<script type="text/javascript">
+    const _themeElement = document.getElementById("theme");
+    const _themeTextElement = document.getElementById("themeText");
+    _themeElement.addEventListener("click", function() {
+        if (document.body.className && document.body.className.includes("--theme-dark")) {
+            document.body.className = "";
+            document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
+            _themeTextElement.innerText = "off";
+
+            if (localStorage)
+                localStorage.removeItem("darkTheme");
+        } else {
+            document.body.className = "--theme-dark";
+			document.querySelector("meta[name='theme-color']").setAttribute("content", "#151515");
+			_themeTextElement.innerText = "on";
+
+			if (localStorage)
+			    localStorage.setItem("darkTheme", ".");
+        }
+    });
+
+	if (localStorage && localStorage.getItem("darkTheme")) {
+		document.body.className = "--theme-dark";
+		document.querySelector("meta[name='theme-color']").setAttribute("content", "#151515");
+		_themeTextElement.innerText = "on";
+	} else {
+		document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
+	}
+</script>
+        </span>
+    </p>
+    <hr>
+    <p>&copy; 2019 The News Panels Inc.</p>
+</div>
+
+	<script>
+		if (CSS && CSS.supports("( -webkit-overflow-scrolling:touch )")) {
+			document.body.setAttribute("webkit", true);
+		}
+	</script>
+	
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script type="text/javascript">
+    var observer = lozad('.lozad', {
+        loaded: function(el) {
+            el.classList.add('img--loaded');
+        }
+    });
+    observer.observe();
+</script>
+</body>
+</html>
+	
