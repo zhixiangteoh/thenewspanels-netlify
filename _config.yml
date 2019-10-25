@@ -5,8 +5,8 @@ icon: "/images/logo.png"
 twitter: "@TheNewsPanels"
 instagram: "thenewspanels"
 
-url: "https://thenewspanels.com"
-domainurl: "https://thenewspanels.com"
+url: ""
+domainurl: ""
 baseurl: "/"
 
 collections:
