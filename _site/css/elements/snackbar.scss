@@ -1,0 +1,33 @@
+.snackbar {
+	display: block;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.9);
+	background-color: var(--normal-overlay-inverse);
+	color: #FFFFFF;
+	color: var(--normal-background);
+
+	text-align: center;
+	vertical-align: middle;
+	height: 56px;
+	line-height: 56px;
+	z-index: 100;
+
+	visibility: hidden;
+	transform: translateY(100%);
+	transition: visibility 0.25s, transform 0.25s;
+}
+
+.snackbar[active] {
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.snackbar__icon.material-icons {
+	transform: translateY(8px);
+}

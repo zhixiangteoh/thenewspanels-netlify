@@ -1,0 +1,142 @@
+---
+layout: default
+---
+
+{% include banner.html %}
+
+<main>
+	<div class="paper">
+		{% assign comics = site.comics | sort: "title" %}
+		{% assign positions = site.positions[page.grid] %}
+		{% assign end = positions.size | minus: 1 %}
+		{% for i in (0..end) %}
+		{% assign position = positions[i] %}
+		{% assign num = page.start | minus: 1 | plus: i %}
+		{% assign comic = comics[num] %}
+		{% if comic %}
+		{% include comic.html comic=comic rowStart=position.rowStart rowEnd=position.rowEnd colStart=position.colStart colEnd=position.colEnd %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</main>
+
+{% include footer.html paginator=true paginator_pages=site.pages paginator_number=page.number %}
+
+<div id="comic_dialog" class="dialog dialog--hidden">
+	<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
+	<div class="dialog__content iframe__container">
+		<iframe id="comic_iframe"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+	{% include footer.js %}
+
+    var _mainElement = document.getElementsByTagName("main")[0];
+	var scrollingElements = [
+		document.body,
+		document.documentElement,
+		document.getElementsByTagName("html")[0],
+		_mainElement
+	];
+
+	var dialogElement = document.getElementById("comic_dialog");
+	var dialogCloseElement = document.getElementById("comic_close");
+	var dialogComicElement = document.getElementById("comic_iframe");
+	var comics = document.getElementsByClassName("paper__item");
+
+	function getWindowHeight() {
+	    return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	}
+
+	// prevent body scrolling (mainly on iOS)
+	var preventScroll = function(e) {
+	    e.preventDefault();
+	    e.stopPropagation();
+	    console.log('touch blocked');
+	    return false;
+	};
+
+	function preventBodyScroll(shouldPrevent) {
+	    if (shouldPrevent) {
+            _mainElement.style.height = getWindowHeight().toString() + "px";
+            _mainElement.addEventListener('touchmove', preventScroll, false);
+	        
+	        console.log('preventing scroll');
+	    } else {
+	        _mainElement.style.height = null;
+	        _mainElement.removeEventListener('touchmove', preventScroll, false);
+	    }
+	}
+
+	// reset values on dialog close
+	function onClose(e) {
+		dialogComicElement.src = "about:blank";
+		dialogElement.classList.add("dialog--hidden");
+		document.body.classList.remove("--dialog");
+		if (window.history.pushState)
+		    window.history.pushState('', '/', window.location.pathname);
+		else window.location.hash = '';
+
+		//preventBodyScroll(false);
+	};
+
+	dialogCloseElement.addEventListener("click", onClose);
+	dialogElement.addEventListener("click", onClose);
+
+	// more prevention of body scrolling when dialog is open
+	dialogElement.addEventListener('touchmove', preventScroll);
+
+    // called when a comic is clicked - get metadata & open the dialog
+	function onClick(event, url, slug) {
+		if ((!url || !slug) && this && this.getAttribute) {
+			url = this.getAttribute("data-url");
+			slug = this.getAttribute("data-slug");
+		}
+
+		if (!event || !event.preventDefault)
+			event = window.event;
+		
+		if (url && slug && event)
+			event.preventDefault();
+	
+		dialogComicElement.src = "{{ site.url }}" + url;
+		dialogElement.classList.remove("dialog--hidden");
+		document.body.classList.add("--dialog");
+		window.location.hash = slug;
+
+		//preventBodyScroll(true);
+	}
+
+	// apply listeners to comic classes; open dialog when clicked
+	for (var i in comics) {
+		if (!comics[i] || !comics[i].addEventListener)
+			continue;
+
+		const comic = comics[i];
+
+		comics[i].addEventListener("click", onClick);
+		comics[i].addEventListener("touchstart click", onClick);
+		comics[i].addEventListener("click tap", onClick);
+	}
+
+	// change hash on dialog change (ex: pagination widget used)
+	function onLoad() {
+		let path = this.contentWindow.location.pathname.split("/");
+		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2])
+			window.location.hash = path[2];
+	};	
+
+	dialogComicElement.addEventListener("load", onLoad);
+	dialogComicElement.onload = onLoad;
+
+	// load comic in dialog if hash is set
+	var hash = window.location.hash ? window.location.hash.substring(1) : null;
+	if (hash && !isNaN(hash) && parseInt(Number(hash)) == hash) {
+		dialogComicElement.src = "{{ site.url }}/comics/" + hash + "/";
+		dialogElement.classList.remove("dialog--hidden");
+		document.body.classList.add("--dialog");
+
+		//preventBodyScroll(true);
+	}
+</script>

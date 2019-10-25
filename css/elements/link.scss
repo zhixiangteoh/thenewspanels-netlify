@@ -1,0 +1,21 @@
+.link {
+	display: table;
+	text-decoration: none;
+	user-select: none;
+	margin: 8px 0;
+}
+
+.link > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.link--comic {
+	padding: 0 2vw;
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
+.link--comic > * {
+	display: inline;
+}

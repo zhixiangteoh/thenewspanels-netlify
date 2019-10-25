@@ -1,0 +1,19 @@
+---
+layout: none
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	{% assign post = site.pages | last %}
+	<head>
+	    {% include head.html title="Redirecting to Comics Page" %}
+		<meta http-equiv="refresh" content="0; URL='{{ site.url }}{{ post.url }}'">
+	</head>
+	<body>
+		Redirecting to <a href="{{ site.url }}{{ post.url }}">{{ site.url }}{{ post.url }}</a>
+		<script type="text/javascript">
+			window.location = "{{ site.url }}{{ post.url }}";
+		</script>
+	</body>
+</html>

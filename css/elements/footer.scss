@@ -1,0 +1,19 @@
+.footer {
+	clear: both;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	padding-top: 20px;
+	padding-bottom: 80px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background: #FFFFFF;
+	background: var(--normal-background);
+}
+
+.footer[fixed] {
+	position: fixed;
+	border-top: 1px solid #BDBDBD;
+	border-top: 1px solid var(--normal-outline);
+}

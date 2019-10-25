@@ -1,0 +1,19 @@
+<a class="paper__item comic" style="grid-area: {{ include.rowStart }} / {{ include.colStart }} / {{ include.rowEnd }} / {{ include.colEnd }};" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.title }}" onclick="onClick(this, '{{ include.comic.url }}', '{{ include.comic.number }}');" href="{{ site.url }}{{ include.comic.url }}">
+	<div class="comic__container">
+		<div class="comic__images">
+			{% for image in include.comic.images %}
+			<img class="lozad img img--lazy comic__images__image" data-src="{{ site.url }}{{ image }}">
+			{% endfor %}
+		</div>
+		<div class="comic__prompt">
+			<p class="comic__prompt__text">
+				<i class="material-icons">arrow_forward</i>
+				<br>View More...
+			</p>
+		</div>
+	</div>
+	<a class="link link--comic --mobile" onclick="onClick(this, '{{ include.comic.url }}#disqus_thread', '{{ include.comic.number }}');">
+		<span>Comments&nbsp;&nbsp;</span>
+		<i class="material-icons">comment</i>
+	</a>
+</a>

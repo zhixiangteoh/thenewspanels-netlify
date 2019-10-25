@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+
+{% assign title = site.name %}
+{% if page.title %}{% assign title = site.name | append: ' - ' | append: page.title %}{% endif %}
+{% if page.name %}{% assign title = site.name | append: ' - ' | append: page.name %}{% endif %}
+{% if page.head-title %}{% assign title = site.name | append: ' - ' | append: page.head-title %}{% endif %}
+{% if include.title %}{% assign title = include.title %}{% endif %}
+
+{% assign image = site.icon %}
+{% if page.images %}{% assign image = page.images[0] %}{% endif %}
+
+{% assign description = site.description %}
+{% if page.description %}{% assign description = page.description %}{% endif %}
+
+<meta name="description" content="{{ description }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, user-scalable=yes"/>
+<meta name="generator" content="{{ site.name }}">
+<title>{{ title }}</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="{{ site.url }}/manifest.json">
+
+<meta name="application-name" content="{{ site.name }}">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="{{ site.description }}">
+<meta name="msapplication-config" content="{{ site.url }}/ieconfig.xml">
+
+<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+<link rel="icon" sizes="16x16" href="{{ site.url }}/favicon.ico">
+<link rel="icon" sizes="24x24" href="{{ site.url }}/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="{{ site.url }}/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="{{ site.url }}/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="{{ site.url }}/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="{{ site.url }}/css/styles.css" rel="stylesheet">
+
+{% if page.images %}
+<meta name="twitter:card" content="summary_large_image">
+{% else %}
+<meta name="twitter:card" content="summary">
+{% endif %}
+<meta name="twitter:creator" content="{{ site.twitter }}">
+<meta name="twitter:site" content="{{ site.twitter }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ image }}">
+
+<meta name="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="og:title" content="{{ title }}">
+<meta name="og:description" content="{{ description }}">
+<meta name="og:image" content="{{ site.url }}{{ image }}">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="{{ site.name }}">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80302642-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80302642-3');
+</script>
+
+{% comment %}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4481485119864993",
+        enable_page_level_ads: true
+    });
+</script>
+{% endcomment %}

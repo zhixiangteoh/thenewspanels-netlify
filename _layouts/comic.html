@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<main class="--frame">
+    <h3 class="title --content">{{ page.name }}</h3>
+    <div class="comic__wrapper">
+        <div id="comicPanels" class="comic--wide">
+            {% for image in page.images %}
+            <div class="comic--wide__panel">
+                <img class="comic--wide__panel__img" src="{{ site.url }}{{ image }}">
+            </div>
+            {% endfor %}
+        </div>
+        <button class="comic__button comic__button--right" onclick="scrollComicNext()">
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button class="comic__button comic__button--left" onclick="scrollComicPrevious()">
+            <i class="material-icons">chevron_left</i>
+        </button>
+    </div>
+
+    <br>
+    <div class="--content">
+        {{ content }}
+    </div>
+    <br>
+    {% include comments.html %}
+</main>
+
+<div style="display: none;">
+    {% include theme-switch.html %}
+</div>
+
+<script type="text/javascript">
+var _comicPanelsContainer = document.getElementById("comicPanels");
+var _comicPanelNum = 0;
+
+function scrollComicNext() {
+    do {
+        _comicPanelNum++;
+    } while (_comicPanelsContainer.children[_comicPanelNum] && !_comicPanelsContainer.children[_comicPanelNum].scrollIntoView);
+
+    if (_comicPanelNum >= _comicPanelsContainer.children.length)
+        _comicPanelNum = 0;
+
+    if (_comicPanelsContainer.children[_comicPanelNum]) {
+        _comicPanelsContainer.children[_comicPanelNum].focus();
+        _comicPanelsContainer.children[_comicPanelNum].scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+
+function scrollComicPrevious() {
+    do {
+        _comicPanelNum--;
+    } while (_comicPanelsContainer.children[_comicPanelNum] && !_comicPanelsContainer.children[_comicPanelNum].scrollIntoView);
+
+    if (_comicPanelNum < 0)
+        _comicPanelNum = _comicPanelsContainer.children.length - 1;
+
+    if (_comicPanelsContainer.children[_comicPanelNum]) {
+        _comicPanelsContainer.children[_comicPanelNum].focus();
+        _comicPanelsContainer.children[_comicPanelNum].scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+</script>
+
+{% include comments-jump.html %}

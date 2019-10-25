@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>The News Panels</title>
+		<description>The news in comics.</description>
+		<link>http://localhost:4000</link>
+		
+		<item>
+			<title>Indian Sea Turtle Populations are Regenerating</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000012/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000012/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000012/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/05/18/panel 1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>Alleged Illegal Immigrant Charged With Four Murders</title>
+			<pubDate>2019-02-24T18:16:44-05:00</pubDate>
+			<link>http://localhost:4000/comics/000011/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000011/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000011/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/02/24/shot 7b (1).jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>The World's Largest Election Ever- What Is At Stake?</title>
+			<pubDate>2019-04-19T22:32:53-04:00</pubDate>
+			<link>http://localhost:4000/comics/000010/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000010/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000010/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/04/21/1.png" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>The Crypto Rollercoaster</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000009/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000009/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000009/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/05/16/bitcoin.1.1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>Korean Ice</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000008/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000008/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000008/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/np1 (1)-4.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>What Will Become of Britain?</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000007/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000007/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000007/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/05/04/PG 1 .jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>As Brexit Deal Sours Trump Offers Johnson Help</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000006/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000006/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000006/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/07/trumpjohnsonbrexitdeal-1.png" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>Untitled Comic</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000005/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000005/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000005/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/07/page 1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>EU Places Pressure on Brazil Over Amazon Fires</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000004/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000004/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000004/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/06/Panel_01-1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>West Papua protests: Soldiers deployed, Internet access cut</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000003/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000003/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000003/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/16/indonesiaprotest01.png" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>Hong Kong protests: Unrest spread to MTR</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000002/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000002/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000002/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/25/mtr 1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+		<item>
+			<title>Hong Kong protests: Police fire tear gas after storming shopping mall</title>
+			<pubDate>2019-09-24T23:58:47-04:00</pubDate>
+			<link>http://localhost:4000/comics/000001/</link>
+			<guid isPermaLink="true">http://localhost:4000/comics/000001/</guid>
+			<content type="html">
+			  <![CDATA[
+			    <a href="http://localhost:4000/comics/000001/">
+			      <img alt="test_pic" src="http://localhost:4000/images/comics/2019/09/25/pg 1.jpg" />
+			    </a>
+			  ]]>
+			</content>
+		</item>
+	</channel>
+</rss>

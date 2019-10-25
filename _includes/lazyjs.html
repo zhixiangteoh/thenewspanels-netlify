@@ -1,0 +1,9 @@
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script type="text/javascript">
+    var observer = lozad('.lozad', {
+        loaded: function(el) {
+            el.classList.add('img--loaded');
+        }
+    });
+    observer.observe();
+</script>
