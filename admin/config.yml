@@ -2,7 +2,7 @@ backend:
   name: github # Netlify’s Git Gateway connects to Git provider’s API
   repo: zhixiangteoh/thenewspanels-netlify
   branch: master # Branch to update (master by default)
-  site-domain: thenewspanels-test.netlify.com
+  site-domain: thenewspanels-netlify.netlify.com
 
 media_folder: "images" # Folder where user uploads files
 
@@ -22,8 +22,7 @@ collections:
         default: "comic"
       - label: "Comic Name"
         name: "name"
-        description: "The name of the comic used for the window title, accessibility/screen
-        readers, etc."
+        description: "The name of the comic used for the window title, accessibility/screen readers, etc."
         widget: "string"
         tagname: "h1"
         default: "Untitled Comic"
@@ -33,14 +32,12 @@ collections:
         format: "YYYY-MM-DD HH:mm:ss"
       - label: "Comic Number"
         name: "number"
-        description: "The "number" of the comic, e.g. "the 11th comic added to the site".
-        Used to identify the comic."
+        description: "The "number" of the comic, e.g. "the 11th comic added to the site". Used to identify the comic."
         widget: "string"
         default: "1"
       - label: "Comic Hash"
         name: "title"
-        description: "The "number" of the comic again, but this time with leading zeroes
-        to make it 6 characters long. Used to sort/order comics."
+        description: "The "number" of the comic again, but this time with leading zeroes to make it 6 characters long. Used to sort/order comics."
         widget: "string"
         default: "000001"
       - label: "Comic Panels"
