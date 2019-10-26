@@ -16,11 +16,11 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "comic"}
-      - {label: "Comic Name", name: "name", description: "The name of the comic used for the window title, accessibility/screen readers, etc.", widget: "string", tagname: "h1", default: "Untitled Comic"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
-      - {label: "Comic Number", name: "number", description: "The 'number' of the comic, e.g. 'the 11th comic added to the site'. Used to identify the comic.", widget: "string", default: "1"}
-      - {label: "Comic Hash", name: "title", widget: "string", default: "000001"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "comic", required: true}
+      - {label: "Comic Name", name: "name", description: "The name of the comic used for the window title, accessibility/screen readers, etc.", widget: "string", tagname: "h1", default: "Untitled Comic", required: true}
+      # - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+      - {label: "Comic Number", name: "number", description: "The 'number' of the comic, e.g. 'the 11th comic added to the site'. Used to identify the comic.", widget: "string", default: "1", required: true}
+      - {label: "Comic Hash", name: "title", description: The "number" of the comic again, but this time with leading zeroes to make it 6 characters long. Used to sort/order comics.", widget: "string", default: "000001", required: true}
       - label: "Comic Panels"
         name: "images"
         description: "The images to display in the comic."
@@ -29,9 +29,6 @@ collections:
           - label: "Image"
             name: "url"
             widget: "image"
-          - label: "Caption"
-            name: "caption"
-            widget: "string"
   - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page" # Used in the UI, ie.: "New Post"
     folder: "_pages" # The path to the folder where the documents are stored
