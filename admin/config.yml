@@ -16,20 +16,11 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "comic"
-      - label: "Comic Name"
-        name: "name"
-        description: "The name of the comic used for the window title, accessibility/screen readers, etc."
-        widget: "string"
-        tagname: "h1"
-        default: "Untitled Comic"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD HH:mm:ss"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "comic"}
+      - {label: "Comic Name", name: "name", description: "The name of the comic used for the window title, accessibility/screen readers, etc.", widget: "string", tagname: "h1", default: "Untitled Comic"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
+      - {label: "Comic Number", name: "number", description: "The 'number' of the comic, e.g. 'the 11th comic added to the site'. Used to identify the comic.", widget: "string", default: "1"}
+      - {label: "Comic Hash", name: "title", widget: "string", default: "000001"}
       - label: "Comic Panels"
         name: "images"
         description: "The images to display in the comic."
