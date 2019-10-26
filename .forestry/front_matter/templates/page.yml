@@ -1,0 +1,60 @@
+---
+label: Page
+hide_body: true
+fields:
+- type: text
+  name: layout
+  label: layout
+  description: Don't change this.
+  hidden: true
+  config:
+    required: true
+  default: page
+- type: number
+  name: grid
+  label: Page Layout
+  description: The predefined "newspaper-like" template to place the comics in when
+    viewed on desktop.
+  config:
+    min: '0'
+    step: '1'
+    required: true
+  default: '0'
+- type: text
+  name: name
+  label: Page Title
+  config:
+    required: true
+  description: The title of the page to be used by the tab/window, search engines,
+    sharing the link on social media, etc.
+  default: Page {number}
+- type: text
+  label: Page Number
+  name: number
+  description: The number of the page, e.g. "this is the 11th page I've created".
+    Used to identify pages.
+  config:
+    required: true
+  default: '1'
+- type: text
+  name: title
+  label: Page Hash
+  description: The number of the page again, but this time with leading zeros to make
+    it 6 characters. Used to sort/order pages.
+  config:
+    required: true
+  default: '000001'
+- type: number
+  name: start
+  label: Comic Number
+  description: The number of the "start" comic that should be the first comic on the
+    page. E.g. the first page should use "1". If the first page contains 10 comics,
+    then the second page would start with comic "11", etc.
+  config:
+    min: '1'
+    max: '999999'
+    step: '1'
+    required: true
+  default: '1'
+pages:
+- _pages/000002.md
