@@ -32,4 +32,33 @@ collections:
           - label: "Caption"
             name: "caption"
             widget: "string"
+  - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Page" # Used in the UI, ie.: "New Post"
+    folder: "_pages" # The path to the folder where the documents are stored
+    sort: "title:asc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page", required: true}
+      - label: "Page Layout"
+        name: "grid"
+        description: "The predefined 'newspaper-like' template to place the comics in when viewed on desktop."
+        widget: "number"
+        valueType: "int"
+        min: 0
+        step: 1
+        required: true
+      - {label: "Page Title", name: "name", description: "The title of the page to be used by the tab/window, search engines, sharing the link on social media, etc.", widget: "string", tagname: "h1", default: "Page {{number}}", required: true}
+      - {label: "Page Number", name: "number", description: "The number of the page, e.g. 'this is the 11th page I've created'. Used to identify pages.", widget: "string", default: "1", required: true}
+      - {label: "Page Hash", name: "title", description: "The number of the page again, but this time with leading zeros to make it 6 characters. Used to sort/order pages.", widget: "string", required: true}
+      - label: "Comic Number"
+        name: "start"
+        description: "The number of the 'start' comic that should be the first comic on the page. E.g. the first page should use '1'. If the first page contains 10 comics, then the second page would start with comic '11', etc."
+        widget: "number"
+        valueType: "int"
+        min: 1
+        max: 999999
+        step: 1
+        default: 1
+        required: true
           
