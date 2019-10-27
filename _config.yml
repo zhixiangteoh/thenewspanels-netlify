@@ -10,12 +10,12 @@ domainurl: ""
 baseurl: "/"
 
 collections:
-    comics:
-        output: true
-        permalink: comics/:name/
-    pages:
-        output: true
-        permalink: :name/
+  comics:
+      output: true
+      permalink: comics/:name/
+  pages:
+      output: true
+      permalink: :name/
 
 positions:
   - - rowStart: 1
