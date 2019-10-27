@@ -27,7 +27,6 @@ collections:
         widget: "list"
         fields: 
           - label: "Image"
-            name: "url"
             widget: "image"
   - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page" # Used in the UI, ie.: "New Post"
@@ -44,6 +43,7 @@ collections:
         valueType: "int"
         min: 0
         step: 1
+        default: 1
         required: true
       - {label: "Page Title", name: "name", description: "The title of the page to be used by the tab/window, search engines, sharing the link on social media, etc.", widget: "string", tagname: "h1", default: "Page {number}", required: true}
       - {label: "Page Number", name: "number", description: "The number of the page, e.g. 'this is the 11th page I've created'. Used to identify pages.", widget: "string", default: "1", required: true}
