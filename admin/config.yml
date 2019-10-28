@@ -24,10 +24,10 @@ collections:
       - label: "Comic Panels"
         name: "images"
         description: "The images to display in the comic."
-        widget: "image"
+        widget: "list"
         field: 
           - label: "Image"
-            name: ""
+            name: "''"
             widget: "image"
   - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page" # Used in the UI, ie.: "New Post"
