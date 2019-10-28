@@ -6,7 +6,7 @@ layout: default
 
 <main>
 	<div class="paper">
-		{% assign comics = site.comics | sort: "title" %}
+		{% assign comics = site.comics | sort(attribute="title",reverse = true) %}
 		{% assign positions = site.positions[page.grid] %}
 		{% assign end = positions.size | minus: 1 %}
 		{% for i in (0..end) %}
