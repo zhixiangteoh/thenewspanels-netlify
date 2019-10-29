@@ -24,7 +24,7 @@ collections:
       - label: "Comic Panels"
         name: "images"
         description: "The images to display in the comic."
-        widget: "object"
+        widget: "list"
         field: 
           - label: "Image"
             name: "imgSrc"
