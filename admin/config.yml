@@ -25,7 +25,7 @@ collections:
         name: "images"
         description: "The images to display in the comic."
         widget: "list"
-        field: 
+        fields: 
           - label: "Image"
             name: "imgSrc"
             widget: "image"
