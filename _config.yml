@@ -7,7 +7,7 @@ instagram: "thenewspanels"
 
 url: ""
 domainurl: ""
-baseurl: "/1"
+baseurl: "/"
 
 collections:
   comics:
