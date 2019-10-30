@@ -26,7 +26,7 @@ collections:
         description: "The images to display in the comic."
         widget: "list"
         field: 
-          - {label: Image, name: image, widget: image}
+          - {label: "Image", name: "image", widget: "image"}
   - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page" # Used in the UI, ie.: "New Post"
     folder: "_pages" # The path to the folder where the documents are stored
