@@ -15,7 +15,7 @@ collections:
       permalink: comics/:name/
   pages:
       output: true
-      permalink: :name/
+      permalink: /1
 
 positions:
   - - rowStart: 1
