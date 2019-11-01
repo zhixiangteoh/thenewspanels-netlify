@@ -4,7 +4,7 @@ Basic docs explaining how the site is built, what dependencies it uses, and how 
 
 ## Hours
 
-Logging the hours I spend on this here. Will update daily. The "commits" column seems confusing, but you can just copy the text and ctrl+f on the [commits page](../../commits/master) to find them.
+Logging the hours I spend on this here. The "commits" column seems confusing, but you can just copy the text and ctrl+f on the [commits page](../../commits/master) to find them.
 
 | Day | Time | Duration | Description | Commits |
 |-----|------|----------|-------------|---------| 
@@ -17,7 +17,7 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 10/26 | 00:08-02:43 | 2h30 | setup netlify cms admin config | 63b227c - 2c8f67d |
 | 10/25 | 22:19-23:58 | 1h30  | initialized new git repo and netlify cms system | cf93018 - 7b7f211 |
 
-Total: 20h45
+Total: 10h50
 
 ## TODO
 
@@ -55,4 +55,7 @@ These identifiers are used in many places throughout the site, but their main pu
 
 ### CSS
 
-This site has a lot of CSS. However, it is split into separate files (using SCSS) with a strict naming convention ([Block Element Modifier](http://getbem.com/naming/)) to make it easier to manage. 
+This site has a lot of CSS. However, it is split into separate files (using SCSS) with a strict naming convention ([Block Element Modifier](http://getbem.com/naming/)) to make it easier to manage.
+
+### General
+This site is based off of the [The News Panels](https://github.com/pravinmb/TheNewsPanels) repository originally created for forestry.io CMS. It is a new and optimized website serving the same purpose.
