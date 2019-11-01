@@ -5,8 +5,8 @@ icon: "/images/logo.png"
 twitter: "@TheNewsPanels"
 instagram: "thenewspanels"
 
-url: ""
-domainurl: ""
+url: "https://thenewspanels-netlify.netlify.com"
+domainurl: "https://thenewspanels-netlify.netlify.com"
 baseurl: "/"
 
 collections:
