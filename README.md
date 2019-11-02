@@ -8,6 +8,7 @@ Logging the hours I spend on this here. The "commits" column seems confusing, bu
 
 | Day | Time | Duration | Description | Commits |
 |-----|------|----------|-------------|---------| 
+| 11/01 | 19:34-20:14 | 40min | social media posts for new panel | |
 | 11/01 | 16:13-17:03 | 50min | added new comic panels 000018 | 973ed5b - 824b723 |
 | 11/01 | 12:26-13:56 | 1h30 | resize and optimize all images | 2daa96c - c36d1c4 |
 | 10/30 | 00:26-02:44 | 2h | cleaned up image folder and rectify base url redirect | f820f6a - 63d96b7 |
