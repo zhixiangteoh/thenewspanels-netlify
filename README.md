@@ -4,6 +4,21 @@ Basic docs explaining how the site is built, what dependencies it uses, and how 
 
 ## Hours
 
+Though the website has now been moved to Wordpress for increased functionality and more general user-friendliness, I continue to use this README.md to log my hours worked for The News Panels, on a weekly basis:
+
+| Week | Hours | Description |
+|------|-------|-------------|
+| Jan 26 - Feb 1 | 5 | call with Michael, moved Wordpress website to Ionos 1&1, transferred domain. Site now live. |
+| Jan 19 - Jan 25 | 1 | call with Michael and Saif |
+| Jan 12 - Jan 18 | - | website in progress; school |
+| Jan 5 - Jan 11 | - | website in progress; school |
+| Dec 29 - Jan 4 | 2 | continued work; slow because school reopened |
+| Dec 22 - Dec 28 | 5 | created and started work on new Wordpress site |
+| Dec 15 - Dec 21 | 2 | added 3 new comic panels to old site |
+
+Running total: 15h
+
+
 Logging the hours I spend on this here. The "commits" column seems confusing, but you can just copy the text and ctrl+f on the [commits page](../../commits/master) to find them.
 
 | Day | Time | Duration | Description | Commits |
