@@ -8,15 +8,15 @@ Though the website has now been moved to Wordpress for increased functionality a
 
 | Week | Hours | Description |
 |------|-------|-------------|
-| Jan 26 - Feb 1 | 5 | call with Michael, moved Wordpress website to Ionos 1&1, transferred domain. Site now live. |
-| Jan 19 - Jan 25 | 1 | call with Michael and Saif |
+| Jan 26 - Feb 1 | 8 | call with Michael, moved Wordpress website to Ionos 1&1, transferred domain. Site now live. Updating old info to new site|
+| Jan 19 - Jan 25 | 2 | call with Michael and Saif. Work on new site. |
 | Jan 12 - Jan 18 | - | website in progress; school |
 | Jan 5 - Jan 11 | - | website in progress; school |
 | Dec 29 - Jan 4 | 2 | continued work; slow because school reopened |
-| Dec 22 - Dec 28 | 5 | created and started work on new Wordpress site |
+| Dec 22 - Dec 28 | 6 | created and started work on new Wordpress site |
 | Dec 15 - Dec 21 | 2 | added 3 new comic panels to old site |
 
-Running total: 15h
+Running total: 20h
 
 
 Logging the hours I spend on this here. The "commits" column seems confusing, but you can just copy the text and ctrl+f on the [commits page](../../commits/master) to find them.
